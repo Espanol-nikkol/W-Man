@@ -1,0 +1,75 @@
+{
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order",
+        "stylelint-prettier"
+    ],
+    "customSyntax": "postcss-scss",
+    "rules": {
+        "prettier/prettier": true,
+        "indentation": 4,
+        "number-leading-zero": "always",
+        "string-quotes": "double",
+        "selector-max-id": 0,
+        "selector-list-comma-newline-after": "always",
+        "comment-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ]
+            }
+        ],
+        "block-opening-brace-space-before": "always",
+        "declaration-colon-space-after": "always",
+        "declaration-colon-space-before": "never",
+        "declaration-block-single-line-max-declarations": 1,
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "blockless-after-same-name-blockless",
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment"
+                ],
+                "ignoreAtRules": [
+                    "else"
+                ]
+            }
+        ],
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "after-single-line-comment",
+                    "first-nested"
+                ]
+            }
+        ],
+        "order/order": [
+            {
+                "type": "at-rule"
+            },
+            "declarations",
+            {
+                "type": "at-rule",
+                "hasBlock": true
+            },
+            "rules"
+        ],
+        "max-nesting-depth": null,
+        "scss/at-extend-no-missing-placeholder": null,
+        "scss/dollar-variable-pattern": "^_?[a-z]+[\\w-]*$",
+        "property-no-unknown": [
+            true,
+            {
+                "ignoreProperties": [
+                    "size"
+                ],
+                "checkPrefixed": true
+            }
+        ]
+    }
+}
